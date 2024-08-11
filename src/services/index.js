@@ -438,7 +438,7 @@ export const sendMessage = async (templateId, user, accessToken, params) => {
   } else if (res.data && res.data.errcode === 40036) {
     console.error(`${user.name}: 推送消息失败! 模板id填写不正确！应该填模板id！要么就是填错了！请检查配置文件！`)
   } else {
-    console.error(`${user.name}: 推送消息失败`, res.data)
+    console.error(`${user.name}: 推送消息失败！`, res.data)
   }
   return {
     name: user.name,
